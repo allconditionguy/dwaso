@@ -1,4 +1,3 @@
-// src/components/ProductForm.js
 import React, { useState } from 'react';
 
 const ProductForm = ({ type }) => {
