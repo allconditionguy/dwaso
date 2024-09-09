@@ -41,8 +41,8 @@ const ProductList = () => {
     const filteredProducts = products.filter(
       (product) => !selectedProducts.includes(product.id)
     );
-    setProducts(filteredProducts); // Update products state to exclude deleted items
-    setSelectedProducts([]); // Clear selectedProducts after deletion
+    setProducts(filteredProducts); 
+    setSelectedProducts([]); 
   };
 
   const isEditMode = selectedProducts.length > 0;
@@ -77,10 +77,10 @@ const ProductList = () => {
 
       <hr className="border-t border-gray-300 my-4" />
 
-      {/* Responsive Grid */}
+     
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) =>
-          Array(1) // Adjust the array size according to the number of items you want to show
+          Array(1) 
             .fill(0)
             .map((_, index) => (
               <div
