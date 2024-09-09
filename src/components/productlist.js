@@ -80,8 +80,8 @@ const ProductList = () => {
      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) =>
-          Array(3) 
-            .fill(4)
+          Array(4) 
+            .fill(0)
             .map((_, index) => (
               <div
                 key={`${product.id}-${index}`}
