@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import AddProduct from './pages/AddProduct';
 import EditProduct from './pages/EditProduct';
 import ProductList from './components/productlist';
@@ -37,16 +37,6 @@ function App() {
           </div>
         </header>
         <div className="container mx-auto mt-8">
-          <nav className="mb-4">
-            <ul className="flex space-x-4">
-              <li>
-                <Link to="/new-product" className="text-blue-500 hover:underline">Add Product</Link>
-              </li>
-              <li>
-                <Link to="/edit-product" className="text-blue-500 hover:underline">Edit Product</Link>
-              </li>
-            </ul>
-          </nav>
           <div>
 
         <Routes>
