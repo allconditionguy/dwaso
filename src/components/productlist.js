@@ -59,18 +59,17 @@ const ProductList = () => {
   };
 
   return (
-    <div className="p-8">
-      <div className="flex justify-between mb-4">
-        <h1 className="text-2xl font-bold">Product List</h1>
-        <div>
+    <div className="p-4 sm:p-6 md:p-8">
+      <div className="flex flex-col sm:flex-row sm:justify-between mb-4">
+        <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-0">Product List</h1>
+        <div className="flex space-x-2">
           <button
-            className="bg-blue-500 text-white px-4 py-2 rounded mr-2"
+            className="bg-blue-500 text-white px-4 py-2 rounded"
             onClick={isEditMode ? handleEditProduct : handleAddProduct}
           >
             {isEditMode ? "EDIT" : "ADD"}
           </button>
           <button className="bg-red-500 text-white px-4 py-2 rounded"  onClick={handleMassDelete} >
-         
             MASS DELETE
           </button>
         </div>
@@ -78,10 +77,10 @@ const ProductList = () => {
 
       <hr className="border-t border-gray-300 my-4" />
 
-    
-      <div className="grid grid-cols-4 gap-4">
+      {/* Responsive Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) =>
-          Array(4)
+          Array(1) // Adjust the array size according to the number of items you want to show
             .fill(0)
             .map((_, index) => (
               <div
