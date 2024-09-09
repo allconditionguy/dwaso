@@ -11,12 +11,12 @@ function App() {
   <div>
   <header className="bg-white text-black p-4">
     <div className="container mx-auto flex flex-col items-center space-y-6">
-      {/* Logo */}
+ 
       <div className="flex-shrink-0">
         <h1 className="text-2xl font-bold text-gray-900">Dwaso</h1>
       </div>
 
-      {/* Navigation */}
+    
       <nav className="flex flex-col items-center space-y-4 font-poppins">
         <a href="#about-us" className="hover:text-gray-500 transition-colors duration-200">
           About Us
@@ -29,7 +29,6 @@ function App() {
         </a>
       </nav>
 
-      {/* Get Started Button */}
       <div>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded font-poppins transition-transform duration-200 hover:scale-105">
           Get Started
@@ -40,7 +39,7 @@ function App() {
 
   <div className="container mx-auto mt-8">
     <div>
-      {/* Content */}
+     
     </div>
   </div>
 </div>
