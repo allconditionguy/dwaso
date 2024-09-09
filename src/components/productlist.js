@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const ProductList = () => {
   const [selectedProducts, setSelectedProducts] = useState([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
-  const [products , setProducts ] = useState([
+  const [products, setProducts] = useState([
     {
       id: "JVC200123",
       name: "Acme DISC",
@@ -41,15 +41,14 @@ const ProductList = () => {
     const filteredProducts = products.filter(
       (product) => !selectedProducts.includes(product.id)
     );
-    setProducts(filteredProducts); // Update products state to exclude deleted items
-    setSelectedProducts([]); // Clear selectedProducts after deletion
+    setProducts(filteredProducts); 
+    setSelectedProducts([]); 
   };
 
   const isEditMode = selectedProducts.length > 0;
 
-  
   const handleAddProduct = () => {
-    navigate("/new-product"); 
+    navigate("/new-product");
   };
 
   const handleEditProduct = () => {
@@ -77,15 +76,15 @@ const ProductList = () => {
 
       <hr className="border-t border-gray-300 my-4" />
 
-      {/* Responsive Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+     
+      <div className="flex overflow-x-auto space-x-4 pb-4">
         {products.map((product) =>
           Array(4)
             .fill(0)
             .map((_, index) => (
               <div
                 key={`${product.id}-${index}`}
-                className="border p-4 rounded-lg relative"
+                className="flex-shrink-0 w-64 border p-4 rounded-lg relative"
               >
                 <input
                   type="checkbox"
